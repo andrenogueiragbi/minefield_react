@@ -18,7 +18,7 @@ const spreadMines = (board, minesAmount) => {
     const rows = board.length
     const columns = board[0].length
     let minesPlanted = 0
-
+    
     while (minesPlanted < minesAmount) {
         const rowSel = parseInt(Math.random() * rows, 10)
         const columnSel = parseInt(Math.random() * columns, 10)
@@ -99,7 +99,7 @@ const invertFlag = (board, row, column) => {
 const flagsUsed = board => fields(board)
     .filter(field => field.flagged).length
 
-export {
+export { 
     createMinedBoard,
     cloneBoard,
     openField,
